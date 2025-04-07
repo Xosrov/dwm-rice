@@ -1,1 +1,1 @@
-xdotool key alt+F5
+# xdotool key alt+F5
