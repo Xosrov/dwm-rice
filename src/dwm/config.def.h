@@ -62,6 +62,7 @@ static const char *const autostart[] = {
     "dunst", NULL,  /* Setting a notification daemon */
     "xhost", "+si:localuser:amiryazdi", NULL,  /* This should make it so clicking Discord links works */
     "dwmblocks", NULL,  /* dwmblocks (status) */
+    "copyq", NULL,  /* dwmblocks (status) */
     "/home/amiryazdi/.local/bin/dotool-stuff.sh", NULL,  /* XRDB john */
     "/usr/lib/polkit-kde-authentication-agent-1", NULL,  /* some stuff */
 	NULL /* terminate */
@@ -80,6 +81,7 @@ static const Rule rules[] = {
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        1,          1,          -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        0.9,        0.6,        -1 },
 	{ "org.wezfurlong.wezterm", NULL, NULL,0,         0,          1,           0,        0.9,        0.6,        -1 },
+	{ "copyq",   NULL,     NULL,           0,         1,          0,           1,        1,          1,          -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        1,          1,          -1 }, /* xev */
 };
 
@@ -139,14 +141,14 @@ static const Key keys[] = {
 	{ 0,                            XK_Print,  spawn,          SHCMD("screenshot.sh") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenucmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_s,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_j,      setcfact,       {.f = +0.25} },
-	{ MODKEY|ShiftMask,             XK_k,      setcfact,       {.f = -0.25} },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_j,      setcfact,       {.f = +0.25} },
+	{ MODKEY,                       XK_k,      setcfact,       {.f = -0.25} },
 	{ MODKEY|ControlMask,           XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
@@ -181,10 +183,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
-	{ MODKEY|ShiftMask,             XK_a,      changefocusopacity,   {.f = +0.025}},
-	{ MODKEY|ShiftMask,             XK_s,      changefocusopacity,   {.f = -0.025}},
-	{ MODKEY|ShiftMask,             XK_z,      changeunfocusopacity, {.f = +0.025}},
-	{ MODKEY|ShiftMask,             XK_x,      changeunfocusopacity, {.f = -0.025}},
+	{ MODKEY|ShiftMask,             XK_a,      changefocusopacity,   {.f = +0.005}},
+	{ MODKEY|ShiftMask,             XK_s,      changefocusopacity,   {.f = -0.005}},
+	{ MODKEY|ShiftMask,             XK_z,      changeunfocusopacity, {.f = +0.005}},
+	{ MODKEY|ShiftMask,             XK_x,      changeunfocusopacity, {.f = -0.005}},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
