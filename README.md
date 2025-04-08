@@ -42,6 +42,7 @@ sudo zypper in chromium git-core fish gtk2-engine-murrine nemo sassc arandr
 sudo chch -s $(which fish)
 cd themes/Catppuccin-GTK-Theme/themes && bash install.sh --tweaks macchiato -c dark -t teal
 sudo zypper in lxappearance
+gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm
 ```
 
 - Configure theme with lxappearance to Catpuccin for example
