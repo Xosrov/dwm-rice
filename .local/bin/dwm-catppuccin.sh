@@ -5,5 +5,5 @@
 # xrdb
 xrdb /home/amiryazdi/.Xresources
 # Setting the wallpaper
-wall=~/wallpapers/wallpaper.png
+wall=~/wallpapers/wallpaper.jpg
 feh --bg-fill $wall
