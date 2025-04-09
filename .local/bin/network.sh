@@ -3,7 +3,7 @@
 # Prints network usage.
 
 case $BLOCK_BUTTON in
-    3) notify-send "🖥 System module" "\- Shows network usage." ;;
+    3) notify-send "🖥 System module" "\- Shows total network usage." ;;
 esac
 
 # Get the first network interface

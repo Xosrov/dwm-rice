@@ -15,6 +15,11 @@ esac
 
 vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 
+# Check if the volume is muted
+if echo "$vol" | grep -q "MUTED"; then
+	echo "🔇" && exit
+fi
+
 vol="${vol#Volume: }"
 
 split() {
@@ -30,7 +35,7 @@ case 1 in
 	$((vol >= 70)) ) icon=" " ;;
 	$((vol >= 30)) ) icon=" " ;;
 	$((vol >= 1)) ) icon=" " ;;
-	* ) echo 🔇 && exit ;;
+	* ) icon=" " ;;
 esac
 
 echo "^c#F38BA8^$icon $vol%"
