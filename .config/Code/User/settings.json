@@ -1,5 +1,6 @@
 {
 	"workbench.iconTheme": "catppuccin-mocha",
+	"workbench.colorTheme": "Catppuccin Mocha",
 	"C_Cpp.intelliSenseEngine": "disabled",
 	"telemetry.feedback.enabled": false,
 	"telemetry.telemetryLevel": "off"
