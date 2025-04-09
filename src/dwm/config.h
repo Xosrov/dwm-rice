@@ -57,7 +57,7 @@ static char *colors[][3]      = {
 static const char *const autostart[] = {
     "/home/amiryazdi/.screenlayout/monitor.sh", NULL,  /* monitor layout & resolution */
     "/home/amiryazdi/.local/bin/dwm-catppuccin.sh", NULL,  /* colourscheme (catppuccin) */ 
-    "xset", "r", "rate", "200", "40", NULL,  /* Keyboard repeat rate */
+    "xset", "r", "rate", "400", "30", NULL,  /* Keyboard repeat rate */
     "picom", NULL,  /* Setting a compositor */
     "dunst", NULL,  /* Setting a notification daemon */
     "xhost", "+si:localuser:amiryazdi", NULL,  /* This should make it so clicking Discord links works */
