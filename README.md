@@ -41,7 +41,7 @@ Change fonts using the `pango-list` tool if you cant find your font
 ```bash
 sudo zypper in chromium git-core fish gtk2-engine-murrine nemo sassc arandr
 sudo chch -s $(which fish)
-cd themes/Catppuccin-GTK-Theme/themes && bash install.sh --tweaks macchiato -c dark -t teal
+cd themes/Catppuccin-GTK-Theme/themes && bash install.sh --tweaks macchiato -c dark -t yellow
 sudo zypper in lxappearance
 gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm
 ```
