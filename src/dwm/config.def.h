@@ -21,37 +21,37 @@ static const double inactiveopacity = 0.8f;     /* Window opacity when it's inac
 static const int user_bh            = 12;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "Noto Sans:size=10:style=Bold", "JetBrainsMono Nerd Font:size=10", "Noto Color Emoji:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
-static char statusbgcolor[]         = "#222222";
-static char statusfgcolor[]         = "#bbbbbb";
-static char tagsnormbgcolor[]       = "#222222";
-static char tagsnormfgcolor[]       = "#bbbbbb";
-static char tagsselbgcolor[]        = "#005577";
-static char tagsselfgcolor[]        = "#eeeeee";
-static char tagsemptynormbgcolor[]      = "#005577";
-static char tagsemptynormfgcolor[]      = "#eeeeee";
-static char tagsemptyselbgcolor[]      = "#005577";
-static char tagsemptyselfgcolor[]      = "#eeeeee";
-static char infonormbgcolor[]       = "#222222";
-static char infonormfgcolor[]       = "#bbbbbb";
-static char infoselbgcolor[]        = "#005577";
-static char infoselfgcolor[]        = "#eeeeee";
+static char normbgcolor[]           = "#1e1e2e";  // base background
+static char normbordercolor[]       = "#45475a";  // muted border
+static char normfgcolor[]           = "#cdd6f4";  // base foreground
+static char selfgcolor[]            = "#1e1e2e";  // inverse for selection
+static char selbordercolor[]        = "#f9e2af";  // yellow border
+static char selbgcolor[]            = "#f9e2af";  // yellow background
+static char statusbgcolor[]         = "#1e1e2e";
+static char statusfgcolor[]         = "#cdd6f4";
+static char tagsnormbgcolor[]       = "#1e1e2e";
+static char tagsnormfgcolor[]       = "#cdd6f4";
+static char tagsselbgcolor[]        = "#f9e2af";
+static char tagsselfgcolor[]        = "#1e1e2e";
+static char tagsemptynormbgcolor[]  = "#45475a";
+static char tagsemptynormfgcolor[]  = "#cdd6f4";
+static char tagsemptyselbgcolor[]   = "#f9e2af";
+static char tagsemptyselfgcolor[]   = "#1e1e2e";
+static char infonormbgcolor[]       = "#1e1e2e";
+static char infonormfgcolor[]       = "#cdd6f4";
+static char infoselbgcolor[]        = "#f9e2af";
+static char infoselfgcolor[]        = "#1e1e2e";
 static char *colors[][3]      = {
-	/*                    fg                bg                border   */
-	[SchemeNorm]      = { normfgcolor,      normbgcolor,      normbordercolor },
-	[SchemeSel]       = { selfgcolor,       selbgcolor,       selbordercolor  },
-	[SchemeStatus]    = { statusfgcolor,    statusbgcolor,    "#000000" },
-	[SchemeTagsSel]   = { tagsselfgcolor,   tagsselbgcolor,   "#000000" },
-	[SchemeTagsNorm]  = { tagsnormfgcolor,  tagsnormbgcolor,  "#000000" },
-	[SchemeTagsEmptyNorm] = { tagsemptynormfgcolor, tagsemptynormbgcolor, "#000000" },
+	/*                       fg              bg               border */
+	[SchemeNorm]         = { normfgcolor,    normbgcolor,     normbordercolor },
+	[SchemeSel]          = { selfgcolor,     selbgcolor,      selbordercolor  },
+	[SchemeStatus]       = { statusfgcolor,  statusbgcolor,   "#000000" },
+	[SchemeTagsSel]      = { tagsselfgcolor, tagsselbgcolor,  "#000000" },
+	[SchemeTagsNorm]     = { tagsnormfgcolor,tagsnormbgcolor, "#000000" },
+	[SchemeTagsEmptyNorm]= { tagsemptynormfgcolor, tagsemptynormbgcolor, "#000000" },
 	[SchemeTagsEmptySel] = { tagsemptyselfgcolor, tagsemptyselbgcolor, "#000000" },
-	[SchemeInfoSel]   = { infoselfgcolor,   infoselbgcolor,   "#000000" },
-	[SchemeInfoNorm]  = { infonormfgcolor,  infonormbgcolor,  "#000000" },
+	[SchemeInfoSel]      = { infoselfgcolor, infoselbgcolor,  "#000000" },
+	[SchemeInfoNorm]     = { infonormfgcolor,infonormbgcolor, "#000000" },
 };
 
 static const char *const autostart[] = {

@@ -25,6 +25,7 @@ cp -r .config/ ~/
 cp -r .screenlayout/ ~/
 cp -r .local/ ~
 cp -r wallpapers/ ~
+cp .Xresources ~/
 ```
 
 Install JetBrains Mono Nerd fonts from https://www.nerdfonts.com/font-downloads
