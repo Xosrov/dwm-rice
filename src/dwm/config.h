@@ -63,8 +63,6 @@ static const char *const autostart[] = {
     "xhost", "+si:localuser:amiryazdi", NULL,  /* This should make it so clicking Discord links works */
     "dwmblocks", NULL,  /* dwmblocks (status) */
     "copyq", NULL,  /* dwmblocks (status) */
-    "/home/amiryazdi/.local/bin/dotool-stuff.sh", NULL,  /* XRDB john */
-    "/usr/lib/polkit-kde-authentication-agent-1", NULL,  /* some stuff */
 	NULL /* terminate */
 };
 
