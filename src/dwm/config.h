@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int snap      = 16;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft  = 0;   /* 0: systray in the right corner, >0: systray on left of status text */
@@ -183,10 +183,22 @@ static const Key keys[] = {
     { MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
     { MODKEY,                       XK_Tab,    view,           {0} },
     { MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-    { MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
-    { MODKEY,                       XK_e,      setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                       XK_r,      setlayout,      {.v = &layouts[2]} },
-    { MODKEY,                       XK_t,      setlayout,      {0} },
+    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, // default
+    { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} }, // monocle
+    { MODKEY,                       XK_space,  setlayout,      {0} }, // toggle
+    // all others
+    { MODKEY|ControlMask,           XK_q,      setlayout,      {.v = &layouts[2]} }, // spiral
+    { MODKEY|ControlMask,           XK_w,      setlayout,      {.v = &layouts[3]} }, // dwindle
+    { MODKEY|ControlMask,           XK_e,      setlayout,      {.v = &layouts[4]} }, // deck
+    { MODKEY|ControlMask,           XK_r,      setlayout,      {.v = &layouts[5]} }, // bstack
+    { MODKEY|ControlMask,           XK_a,      setlayout,      {.v = &layouts[6]} }, // bstackhoriz
+    { MODKEY|ControlMask,           XK_s,      setlayout,      {.v = &layouts[7]} }, // grid
+    { MODKEY|ControlMask,           XK_d,      setlayout,      {.v = &layouts[8]} }, // nrowgrid
+    { MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[9]} }, // horizgrid
+    { MODKEY|ControlMask,           XK_z,      setlayout,      {.v = &layouts[10]}}, // gaplessgrid
+    { MODKEY|ControlMask,           XK_x,      setlayout,      {.v = &layouts[11]}}, // centeredmaster
+    { MODKEY|ControlMask,           XK_c,      setlayout,      {.v = &layouts[12]}}, // centeredfloatingmaster
+
     { MODKEY|ShiftMask,             XK_r,      togglefloating, {0} },
     { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
