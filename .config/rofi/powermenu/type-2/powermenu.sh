@@ -20,13 +20,13 @@ uptime="`uptime`"
 host=$HOST
 
 # Options
-shutdown='⏻'
-reboot='↻'
-lock='🔒'
-suspend='⏸️'
-logout='⍈'
-yes='Ja'
-no='Nu'
+shutdown=' '
+reboot=' '
+lock=' '
+hibernate=''
+logout=' '
+yes=' '
+no=' '
 
 # Rofi CMD
 rofi_cmd() {
@@ -56,7 +56,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$lock\n$hibernate\n$logout\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -67,10 +67,10 @@ run_cmd() {
 			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
-		elif [[ $1 == '--suspend' ]]; then
+		elif [[ $1 == '--hibernate' ]]; then
 			mpc -q pause
 			amixer set Master mute
-			systemctl suspend
+			systemctl hibernate
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
@@ -107,8 +107,8 @@ case ${chosen} in
             slock
 		fi
         ;;
-    $suspend)
-		run_cmd --suspend
+    $hibernate)
+		run_cmd --hibernate
         ;;
     $logout)
 		run_cmd --logout

@@ -7,7 +7,7 @@ case $BLOCK_BUTTON in
 	2) wpctl set-mute @DEFAULT_SOURCE@ toggle ;;
 	4) wpctl set-volume @DEFAULT_SOURCE@ 1%+ ;;
 	5) wpctl set-volume @DEFAULT_SOURCE@ 1%- ;;
-	3) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
+	3) notify-send "Mic volume module" "\- Shows microphone volume.
 - Middle click to mute.
 - Scroll to change." ;;
 	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
@@ -28,7 +28,7 @@ vol="$(printf "%.0f" "$(split "$vol" ".")")"
 
 case 1 in
 	$((vol >= 1)) ) icon="󰍬" ;;
-	* ) echo 󰍭 && exit ;;
+	* ) icon="󰍭" ;;
 esac
 
 echo "$icon $vol%^d^"

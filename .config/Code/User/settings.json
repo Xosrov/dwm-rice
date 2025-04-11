@@ -3,5 +3,6 @@
 	"workbench.colorTheme": "Catppuccin Mocha",
 	"C_Cpp.intelliSenseEngine": "disabled",
 	"telemetry.feedback.enabled": false,
-	"telemetry.telemetryLevel": "off"
+	"telemetry.telemetryLevel": "off",
+	"editor.fontFamily": "JetBrainsMono Nerd Font Mono"
 }

@@ -3,7 +3,7 @@
 # Prints network usage.
 
 case $BLOCK_BUTTON in
-    3) notify-send "🖥 System module" "\- Shows total network usage." ;;
+    3) notify-send "Network module" "\- Shows total network usage." ;;
 esac
 
 # Get the first network interface
@@ -17,9 +17,9 @@ if [ -n "$interface" ]; then
     tx_mb=$(echo "$tx_bytes / 1024 / 1024" | bc)
 else
     # No network interface found
-    network_info="❌ No Network"
+    network_info=" No network"
 fi
 
 # Icons and formatting
-echo "^c#615BFF^📥 RX:${rx_mb}MB  📤 TX:${tx_mb}MB"
+echo "^c#B0F9FF^  RX:${rx_mb}MB    TX:${tx_mb}MB"
 
