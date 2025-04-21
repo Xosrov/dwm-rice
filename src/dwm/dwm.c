@@ -2540,6 +2540,7 @@
 		 return;
 	 grabbuttons(c, 0);
 	 XSetWindowBorder(dpy, c->win, scheme[SchemeNorm][ColBorder].pixel);
+	 opacity(c, c->unfocusopacity);
 	 if (setfocus) {
 		 XSetInputFocus(dpy, root, RevertToPointerRoot, CurrentTime);
 		 XDeleteProperty(dpy, root, netatom[NetActiveWindow]);
@@ -2801,8 +2802,9 @@
 	 } else
 		 c->maxw = c->maxh = 0;
 	 if (size.flags & PMinSize) {
-		 c->minw = size.min_width;
-		 c->minh = size.min_height;
+		// ignore min size hint
+		//  c->minw = size.min_width;
+		//  c->minh = size.min_height;
 	 } else if (size.flags & PBaseSize) {
 		 c->minw = size.base_width;
 		 c->minh = size.base_height;

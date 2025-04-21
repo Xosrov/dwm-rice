@@ -16,8 +16,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const double activeopacity   = 0.95f;    /* Window opacity when it's focused (0 <= opacity <= 1) */
-static const double inactiveopacity = 0.8f;     /* Window opacity when it's inactive (0 <= opacity <= 1) */
+static const double activeopacity   = 0.98f;    /* Window opacity when it's focused (0 <= opacity <= 1) */
+static const double inactiveopacity = 0.95f;     /* Window opacity when it's inactive (0 <= opacity <= 1) */
 static const int user_bh            = 12;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "Noto Sans:size=10:style=Bold", "JetBrainsMono Nerd Font:size=10", "Noto Color Emoji:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
@@ -75,12 +75,10 @@ static const Rule rules[] = {
      *    WM_NAME(STRING) = title
      */
     /* class     instance  title           tags mask  isfloating  isterminal  noswallow focusopacity unfocusopacity monitor */
-    { "Gimp",    NULL,     NULL,           0,         1,          0,           0,        1,          1,          -1 },
-    { "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        1,          1,          -1 },
-    { "St",      NULL,     NULL,           0,         0,          1,           0,        0.9,        0.6,        -1 },
-    { "org.wezfurlong.wezterm", NULL, NULL,0,         0,          1,           0,        0.9,        0.6,        -1 },
-    { "copyq",   NULL,     NULL,           0,         1,          0,           1,        1,          1,          -1 },
-    { NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        1,          1,          -1 }, /* xev */
+    { "St",      NULL,     NULL,           0,         0,          1,           0,        0.98,        0.95,        -1 },
+    { "org.wezfurlong.wezterm", NULL, NULL,0,         0,          1,           0,        0.98,        0.95,        -1 },
+    { "copyq",   NULL,     NULL,           0,         1,          0,           1,        0.9,         0.9,          -1 },
+    { NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        1,           1,          -1 }, /* xev */
 };
 
 /* layout(s) */
