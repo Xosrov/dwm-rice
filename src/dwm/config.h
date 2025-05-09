@@ -126,7 +126,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "/home/amiryazdi/.config/rofi/launchers/type-2/launcher.sh", NULL };
-static const char *termcmd[]  = { "wezterm", NULL };
+static const char *termcmd[]  = { "wezterm", "start", "--always-new-process", NULL };
 static const char *powermenucmd[] = {"/home/amiryazdi/.config/rofi/powermenu/type-2/powermenu.sh", NULL };
 //sound controls
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
