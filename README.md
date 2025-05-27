@@ -43,7 +43,11 @@ sudo zypper in chromium git-core fish gtk2-engine-murrine nemo sassc arandr brig
 sudo chch -s $(which fish)
 cd themes/Catppuccin-GTK-Theme/themes && bash install.sh --tweaks macchiato -c dark -t yellow
 sudo zypper in lxappearance
-gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm
+# need this helper script
+gsettings set org.cinnamon.desktop.default-applications.terminal exec open-wezterm-here.sh
+# pick one from ls /usr/share/applications/
+# query with  xdg-mime query default "inode/directory"
+xdg-mime default nemo.desktop "inode/directory"
 ```
 
 - Configure theme with lxappearance to Catpuccin for example
