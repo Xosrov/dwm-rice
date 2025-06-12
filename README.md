@@ -42,7 +42,7 @@ Change fonts using the `pango-list` tool if you cant find your font
 sudo zypper in chromium git-core fish gtk2-engine-murrine nemo sassc arandr brightnessctl
 sudo chch -s $(which fish)
 cd themes/Catppuccin-GTK-Theme/themes && bash install.sh --tweaks macchiato -c dark -t yellow
-sudo zypper in lxappearance
+sudo zypper in lxappearance autorandr
 # need this helper script
 gsettings set org.cinnamon.desktop.default-applications.terminal exec open-wezterm-here.sh
 # pick one from ls /usr/share/applications/
@@ -51,6 +51,7 @@ xdg-mime default nemo.desktop "inode/directory"
 ```
 
 - Configure theme with lxappearance to Catpuccin for example
+- Configure default xrandr configs (for example `autorandr --save mobile` for single-monitor usecase)
 - Install copyq from https://github.com/hluk/CopyQ/releases
 - Add ~/.local/bin to path: `fish_add_path /home/amiryazdi/.local/bin/`
 
