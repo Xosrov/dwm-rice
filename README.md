@@ -18,7 +18,7 @@ Catppuccin (theme)
 ```bash
 sudo zypper in clang make
 sudo zypper in libX11-devel libXft-devel libXinerama-devel fribidi-devel libXrandr-devel imlib2-devel
-sudo zypper in dunst kitty picom rofi wezterm zathura
+sudo zypper in dunst kitty picom rofi wezterm zathura NetworkManager-applet blueman
 sudo cp src/dwm/dwm.desktop /usr/share/xsessions/
 sudo zypper in libnotify-tools calcurse xdotool scrot
 cp -r .config/ ~/

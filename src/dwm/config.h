@@ -63,6 +63,8 @@ static const char *const autostart[] = {
     "xhost", "+si:localuser:amiryazdi", NULL,                          /* This should make it so clicking Discord links works */
     "dwmblocks", NULL,                                                 /* dwmblocks (status) */
     "copyq", NULL,                                                     /* Copyq start */
+    "blueman-applet", NULL,                                            /* Blueman applet start */
+    "nm-applet", NULL,                                                 /* NetworkManager applet start */
     NULL                                                               /* terminate */
 };
 
